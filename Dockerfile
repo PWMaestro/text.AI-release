@@ -24,5 +24,5 @@ WORKDIR /var/www/cgi-bin
 RUN make
 RUN chmod 755 script.cgi
 RUN rm Makefile script.cpp
-CMD apache2ctl -D FOREGROUND
+CMD apache2ctl --force FOREGROUND
 VOLUME ["/var/lock/"]
